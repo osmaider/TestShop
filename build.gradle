@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0-rc-1'
+    implementation group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.9.51'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.0.3'
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+
+
+
+}
+
+test {
+    useJUnitPlatform()
+}
